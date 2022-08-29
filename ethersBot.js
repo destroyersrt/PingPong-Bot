@@ -64,7 +64,9 @@ const main = async () => {
         // saving new config to file to stay updated in case of crash.
         fs.writeFileSync('./config.json', JSON.stringify(config));
 
-        tx = await contract.connect(signer).pong(event.transactionHash)
+        tx = await contract.connect(signer).pong(event.transactionHash, {
+            "gasPrice": 2500000000
+        })
         await tx.wait();
     }
 
