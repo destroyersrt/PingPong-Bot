@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const main = async () => {
     // PingPong Contract Address    
-    const contractAddress= '0xfba6861a0C704872A89FB76a1E7114CfE8e83289'
+    const contractAddress= '0x7D3a625977bFD7445466439E60C495bdc2855367'
     // Web3 Provider - Infura
     const provider = new ethers.providers.WebSocketProvider(
         `wss://kovan.infura.io/ws/v3/${process.env.KEY}`
